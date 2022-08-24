@@ -7,7 +7,7 @@ const options = {
 	}
 };
 
-
+console.log('test')
 export const AJAX= async function(MovieName){
  try{
     
