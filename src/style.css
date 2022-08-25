@@ -1,9 +1,23 @@
-
-
+*{
+    background-color: var(--grey_color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+:root{
+    --main_color:#f59e0b;
+    --grey_color:#292524;
+    --dark-grey_color:#1c1917;
+    --accent_color:#fef3c7;
+}
 
 
 .header{
+   
     display: flex;
+     justify-content: space-between;
+    
 }
 
 .main-nav-list{
@@ -12,11 +26,123 @@
 }
 
 .nav--btn{
+    cursor: pointer;
     border: none;
     
 }
+
+.main-nav-list{
+margin-right: 3rem;
+}
+
 .ul--icons{
-   
+    margin-top: 1rem;
+    margin-right:3rem;
     width: 24px;
     height: 24px;
 }
+
+.main-logo{
+
+    font-family: 'Signika Negative', sans-serif;
+    color: var(--main_color);
+    font-size: 40px;
+margin-top: 17px;
+margin-left: 3rem;
+}
+::placeholder {
+    color: var(--accent_color);
+    
+    font-family:sans-serif;
+    
+  }
+  input, select, textarea{
+    color: var(--accent_color);
+    
+} 
+input[type=text] {
+    width: 30%;
+    padding: 3px 20px;
+    margin: 18px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid var(--accent_color);
+    opacity: 0.5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  input[type=text]:focus {
+    border-bottom: 1px solid #555;
+  }
+li{
+    list-style:none;
+}
+  .search-results{
+     display: grid;
+     grid-template-columns:repeat(6,1fr) ;
+     margin-left: 8rem;
+     margin-top: 3rem;
+     
+  }
+  
+.preview{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+     transition: 0.5s;
+     width: 70%;
+     border-radius: 8px;
+    
+}
+.preview:hover{
+     opacity: 0.5;
+     transition: 0.5s;
+    
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+
+    
+}
+  .preview--img{
+    border-radius: 8px;
+    
+    width:100%;
+    height:100%;
+
+  }
+  .movie-title{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: large;
+    color: var(--main_color);
+  }
+  .title-container{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Signika Negative', sans-serif;
+
+    color: var(--main_color);
+  }
+
+  .welcome-message{
+    color: var(--accent_color);
+   
+   
+    
+  }
+  .hidden{
+    opacity: 1;
+  }
+
+  .page-container{
+    
+    display: flex;
+    justify-content: center;
+    
+  }
+ 
