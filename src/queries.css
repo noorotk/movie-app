@@ -1,0 +1,101 @@
+@media (max-width:98em) {
+    .movie-title{
+       
+        font-size:small;
+        
+      }
+      .release-date{
+        font-size:small;
+      }
+    
+}
+@media (max-width:75em) {
+     .search-results{
+        
+        grid-template-columns:repeat(5,1fr) ;
+        
+        
+     } 
+      
+    
+}
+@media (max-width:65em) {
+    .search-results{
+        
+        grid-template-columns:repeat(4,1fr) ;
+        
+        
+     }
+     
+    
+}
+@media (max-width:54em) {
+    .search-results{
+        
+        grid-template-columns:repeat(3,1fr) ;
+        
+        
+     }
+     :root{
+      overflow: scroll;
+
+    } 
+    .preview-img-container{
+     
+      margin-right: 10rem;
+    }
+    .preview-info{
+      display: flex;
+     flex-direction: column;
+     justify-content: center;
+   
+     align-items: center;
+     max-width: 60rem;
+     min-width: 20rem;
+     margin-top: 15%;
+     
+     
+     
+  
+      
+    }
+     
+    
+}
+@media (max-width:44em) {
+     .search-results{
+       
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: relative;
+        right: 1rem;
+        min-width: 1rem;
+        
+     } 
+
+    :root{
+      overflow: scroll;
+
+    }
+    .preview-img-container{
+      width: 50%;
+      height: 100%;
+      border-radius: 8px;
+      
+      justify-content: center;
+     align-items: center;
+    }
+    .over-view{
+      color: var(--accent_color);
+      max-width: 40rem;
+      font-family: 'Nunito', sans-serif;
+      margin-top: 2rem;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    
+   
+     
+    
+}

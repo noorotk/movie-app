@@ -1,22 +1,35 @@
 *{
-    background-color: var(--grey_color);
+   
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    
 }
+body {
+  min-width: fit-content;
+  background-color: var(--grey_color);
+}
+
+
 :root{
+  
     --main_color:#f59e0b;
     --grey_color:#292524;
     --dark-grey_color:#1c1917;
     --accent_color:#fef3c7;
+   
 }
 
+.container{width: 100%;}
 
+  
 .header{
    
-    display: flex;
-     justify-content: space-between;
+  width: auto;
+display: flex;
+justify-content: space-between;
+margin-right: 2rem;
+
     
 }
 
@@ -32,26 +45,28 @@
 }
 
 .main-nav-list{
-margin-right: 3rem;
+
 }
 
 .ul--icons{
     margin-top: 1rem;
-    margin-right:3rem;
+   cursor: pointer;
     width: 24px;
     height: 24px;
+    
 }
 
 .main-logo{
 
     font-family: 'Signika Negative', sans-serif;
     color: var(--main_color);
-    font-size: 40px;
-margin-top: 17px;
+    font-size: 200%;
+margin-top: 1rem;
 margin-left: 3rem;
 }
 ::placeholder {
-    color: var(--accent_color);
+    
+    color: var(--main_color);
     
     font-family:sans-serif;
     
@@ -59,11 +74,16 @@ margin-left: 3rem;
   input, select, textarea{
     color: var(--accent_color);
     
-} 
+} .search-bar{
+  display: flex;
+  position: relative;
+  right: 3rem;
+}
 input[type=text] {
-    width: 30%;
+  background-color: var(--grey_color);
+    width: 100%;
     padding: 3px 20px;
-    margin: 18px 0;
+    margin: 18px 18px ;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid var(--accent_color);
@@ -93,6 +113,7 @@ li{
      transition: 0.5s;
      width: 70%;
      border-radius: 8px;
+     cursor: pointer;
     
 }
 .preview:hover{
@@ -131,12 +152,14 @@ li{
 
   .welcome-message{
     color: var(--accent_color);
+    position: relative;
+    left: 3rem;
    
    
     
   }
   .hidden{
-    opacity: 1;
+    opacity: 0;
   }
 
   .page-container{
@@ -144,5 +167,59 @@ li{
     display: flex;
     justify-content: center;
     
+  }
+.preview-container{
+  justify-content: center;
+  min-width: 40rem;
+}
+  .preview-info{
+    display: flex;
+   justify-content: space-between;
+   max-width: 60rem;
+   margin-top: 15%;
+   
+   
+   
+
+    
+  }
+  .title{
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--main_color);
+  }
+  .preview-img-container{
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+    margin-right: 2rem;
+  }
+  .over-view{
+    color: var(--accent_color);
+    max-width: 40rem;
+    font-family: 'Nunito', sans-serif;
+
+  }
+  .movie-details{
+    margin-right: 10rem;
+  }
+  .release-date-preview{
+    color: var(--main_color);
+    margin-top: 1rem;
+    font-family: 'Changa', sans-serif;
+  }
+  .rating{
+    
+    
+    color: var(--main_color);
+    font-family: 'Changa', sans-serif;
+    margin: 1rem;
+
+  }
+  .side-details{
+    display: flex;
+    
+
   }
  
