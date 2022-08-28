@@ -11,8 +11,7 @@ const GetData= async function(){
         const id = window.location.hash.slice(1);
         
          const data = await AJAX(id);
-
-         view.render(data);
+         
     
     const markup=`<div class="preview-container">
     <div class="preview-info">
@@ -42,6 +41,9 @@ const GetData= async function(){
     
     searchButton.addEventListener('click',loadSearchResult)
 window.addEventListener('hashchange',GetData);
+window.addEventListener('hashchange',function(){
+  this.window.location.reload();
+});
 window.addEventListener('load',GetData);
 
 

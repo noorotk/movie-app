@@ -16,9 +16,12 @@ export default class rendering  {
         
             return ` 
             <li class="preview">
+            
              
              <div class="img-container">
+             <a href="#${results.id}">
                 <img class="preview--img" src="${results.poster_path}" alt="">
+                </a>
              </div>
             <div class="title-container">
              <h2 class="movie-title">${results.title}</h2>

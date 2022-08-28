@@ -10,8 +10,8 @@ import rendering from "./rendering.js";
 
     render(data){
         this._data = data;
-        console.log(this._generatemarkup())
-        const markup = this._generatemarkup();
+        // console.log(this._generatemarkup())
+        const markup = this._generatemarkup(); 
        this._parentEl.innerHTML = '';
        this._parentEl.insertAdjacentHTML('afterbegin',markup)
     

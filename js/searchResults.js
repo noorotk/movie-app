@@ -18,11 +18,11 @@ export const loadSearchResult = async function(){
 console.log(searchValue)
     const response = await fetch(`https://advanced-movie-search.p.rapidapi.com/search/movie?query=${searchValue}&page=1`,options);
    const SearchData = await response.json();
-console.log(SearchData);
+// console.log(SearchData);
 state.results = SearchData.results.map(results=>{
     return results;
 })
-console.log(state.results);
+// console.log(state.results);
    view.render(state.results);
 welcomeMessage.classList.add('hidden');
 
