@@ -1,19 +1,16 @@
-import { AJAX } from "./API.js"; 
-import {loadSearchResult} from "./searchResults.js";
+import { AJAX } from "./API.js";
+import { loadSearchResult } from "./searchResults.js";
 import view from "./view.js";
-const previewContainer=document.querySelector('.page-container');
-const searchButton=document.querySelector('.search-btn');
+const previewContainer = document.querySelector(".page-container");
+const searchButton = document.querySelector(".search-btn");
 
+const GetData = async function () {
+  try {
+    const id = window.location.hash.slice(1);
 
-   
-const GetData= async function(){
-    try{
-        const id = window.location.hash.slice(1);
-        
-         const data = await AJAX(id);
-         
-    
-    const markup=`<div class="preview-container">
+    const data = await AJAX(id);
+
+    const markup = `<div class="preview-container">
     <div class="preview-info">
 
       <div class="preview-img-container">
@@ -22,28 +19,28 @@ const GetData= async function(){
      <div class="movie-details">
       <h1 class="title">${data.title}</h1>
       <h4 class="over-view"><p>Over View:</p> ${data.overview}</h4>
-      <div class="side-details"> <div class="release-date-preview">${data.release_date.slice(0,4)}</div>
-      <div class="rating">Rating: ${data.vote_average.toString().slice(0,3)} </div>
+      <div class="side-details"> <div class="release-date-preview">${data.release_date.slice(
+        0,
+        4
+      )}</div>
+      <div class="rating">Rating: ${data.vote_average
+        .toString()
+        .slice(0, 3)} </div>
     
          </div>
              </div> 
            </div>
          </div> `;
-         previewContainer.innerHTML='';
-         previewContainer.insertAdjacentHTML("afterbegin",markup)
-}catch (err){
-    console.log(err)
-}
-    }
+    previewContainer.innerHTML = "";
+    previewContainer.insertAdjacentHTML("afterbegin", markup);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-    
-   
-    
-    searchButton.addEventListener('click',loadSearchResult)
-window.addEventListener('hashchange',GetData);
-window.addEventListener('hashchange',function(){
+searchButton.addEventListener("click", loadSearchResult);
+window.addEventListener("hashchange", GetData);
+window.addEventListener("hashchange", function () {
   this.window.location.reload();
 });
-window.addEventListener('load',GetData);
-
-
+window.addEventListener("load", GetData);
